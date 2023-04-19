@@ -1,0 +1,9 @@
+2023-01-31 15:32:23 ERROR AppNivelLog:15 - Ha fallado la division: 
+java.lang.ArithmeticException: / by zero
+	at org.ruben.java.log.AppNivelLog.dividir(AppNivelLog.java:20)
+	at org.ruben.java.log.AppNivelLog.main(AppNivelLog.java:13)
+2023-01-31 15:35:32 DEBUG AppNivelLog:14 - Hola mundo (debug)
+2023-01-31 15:35:32 INFO  AppNivelLog:18 - Hola mundo (info)
+2023-01-31 15:35:32 WARN  AppNivelLog:21 - Hola mundo (warn)
+2023-01-31 15:35:32 ERROR AppNivelLog:22 - Hola mundo (error)
+2023-01-31 15:35:32 FATAL AppNivelLog:23 - Hola mundo (fatal)

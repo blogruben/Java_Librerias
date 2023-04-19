@@ -1,0 +1,23 @@
+
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'log4j:log4j:1.2.17'
+}
+
+application {
+    mainClassName = 'org.ruben.java.log.AppNivelLog'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+task wrapVersion(type: Wrapper) {
+   gradleVersion = '5.6'
+}

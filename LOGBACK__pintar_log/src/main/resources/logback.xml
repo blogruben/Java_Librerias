@@ -1,0 +1,55 @@
+<!-- Depurar logback <configuration debug="true"> -->
+<!-- Modificar configuracion mientra la aplicacion se ejecuta <configuration scan="true" scanPeriod="15 seconds"> -->
+<configuration>
+  <!--Depurar logback <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />  -->
+  <appender name="CONSOLA" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <!-- %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n-->
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Tambien podemos definir LOG_DIR como una variable de entorno
+  Definimos -> java -MY_HOME=/var/log org.ruben.java.logback.App
+  y usamos el ${LOG_DIR} sin la etiqueta <property> 
+  la ruta /var/log crea los directorios y carpetas en C:\var\log\tests.log
+  si ponemos la ruta . genera el fichero al lado del Jar -->
+  <property name="LOG_DIR" value="/var/log/application" />
+  <property name="LOG_FILE" value="LogFile" />
+  <appender name="LOG_PRINCIPAL" class="ch.qos.logback.core.FileAppender">
+      <file>${LOG_DIR}/${LOG_FILE}.log</file>
+      <append>true</append>
+      <!--existen varias politicas de rolling
+      TimeBasedRollingPolicy, tiempo
+      SizeAndTimeBasedRollingPolicy, depende del tamano archivo log actual y tiempo
+      FixedWindowRollingPolicy, archiva log cuando se ejecuta la App -->
+      <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+          <!-- rollover diario -->
+          <!-- <fileNamePattern>${LOG_DIR}/%d{yyyy/MM}/${LOG_FILE}.gz</fileNamePattern> -->
+          <!-- cuando el archivo se llama LogFile.gz, logback comprime los ficheros -->
+          <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.gz</fileNamePattern>
+          <!-- historial de 30 dias con un maximo de 3GB -->
+          <maxHistory>30</maxHistory>
+          <totalSizeCap>3GB</totalSizeCap>
+      </rollingPolicy>
+      <encoder>
+          <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+      </encoder>
+  </appender>
+
+  <!--niveles TRACE, DEBUG, INFO, WARN y ERROR.-->
+  <!--root logger, todos las subclases heredan esta configuracion--> 
+  <root level="debug">
+    <appender-ref ref="CONSOLA" />
+  </root>
+
+  <!--estas clases y sus hijas tiene un nivel de log diferente al de root
+  <logger name="org.ruben.java.logback.tarea" level="INFO" /> 
+  los logs se pintan en el fichero LOG_PRINCIPAL y en la consola porque lo 
+  hereda de rootlog, en caso que no queramos que herede y pinte en consola ponemos
+  <logger name="com.baeldung.logback.tests.subtarea" level="WARN" additivity="false" >--> 
+  <logger name="com.baeldung.logback.tarea.subtarea" level="WARN"> 
+      <appender-ref ref="LOG_PRINCIPAL" /> 
+  </logger> 
+
+</configuration>
