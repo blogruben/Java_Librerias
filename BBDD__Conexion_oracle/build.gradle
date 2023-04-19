@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    maven {
+        url="https://broadinstitute.jfrog.io/artifactory/libs-release-local"//repositorio Oracle
+    }
+}
+
+dependencies {
+    implementation 'com.oracle.jdbc:ojdbc8:12.2.0.1'
+}
+
+application {
+    mainClassName = 'org.ruben.java.oracle.App'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8 
+task wrapVersion(type: Wrapper) {
+   gradleVersion = '5.6'
+}
