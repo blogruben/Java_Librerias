@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+}
+
+task wrapVersion(type: Wrapper) {
+   gradleVersion = '5.6'
+}
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8 
