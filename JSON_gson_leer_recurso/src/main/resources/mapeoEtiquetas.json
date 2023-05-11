@@ -1,0 +1,13 @@
+{ 
+    "seccion_1" : {
+        "nombre" : "clientes", 
+        "tipo" : "25",
+        "entorno" : "integracion", 
+        "formato" : "digital"
+    },
+    "seccion_2" : {
+        "formato parte 1" : "array", 
+        "formato parte 2" : "listado"
+    }
+    
+}
