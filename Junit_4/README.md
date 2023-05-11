@@ -1,8 +1,3 @@
-
- https://www.adictosaltrabajo.com/2013/09/16/junit-test-runners/
- https://www.vogella.com/tutorials/JUnit4/article.html
-
-
 # Versiones 
 Junit 4 requiere minimo Java 5.
 Junit 5 requiere minimo Java 8.
