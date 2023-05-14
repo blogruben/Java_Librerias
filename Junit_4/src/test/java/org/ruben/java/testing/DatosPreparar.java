@@ -5,7 +5,7 @@ import org.junit.Test;
 import junit.framework.TestCase;
 
 //Fixture pone los objecto para pasar los tests
-public class PrepararDatos extends TestCase { // para poder sobrescribir el inicio con setUp y el final con tearDown
+public class DatosPreparar extends TestCase { // para poder sobrescribir el inicio con setUp y el final con tearDown
     protected Persona persona;
 
     // iniciamos antes de procesar

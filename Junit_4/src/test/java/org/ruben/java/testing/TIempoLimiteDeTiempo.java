@@ -2,7 +2,7 @@ package org.ruben.java.testing;
 
 import org.junit.Test;
 
-public class TestsConLimiteDeTiempo {
+public class TIempoLimiteDeTiempo {
 
     
     @Test(timeout = 1000)

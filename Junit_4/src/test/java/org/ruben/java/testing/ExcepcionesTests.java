@@ -6,7 +6,7 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
-public class TestearExcepciones {
+public class ExcepcionesTests {
     Calcular calcular = new Calcular("centimetros");
 
     @Test()

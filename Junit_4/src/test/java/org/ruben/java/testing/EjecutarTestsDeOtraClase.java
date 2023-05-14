@@ -7,7 +7,7 @@ import org.junit.runner.notification.Failure;
 // Runner
 public class EjecutarTestsDeOtraClase {
    public static void main(String[] args) {
-      Result result = JUnitCore.runClasses(PrepararDatos.class);
+      Result result = JUnitCore.runClasses(DatosPreparar.class);
 		
       for (Failure failure : result.getFailures()) {
          System.out.println(failure.toString());

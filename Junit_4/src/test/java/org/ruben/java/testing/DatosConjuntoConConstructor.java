@@ -12,7 +12,7 @@ import org.junit.runners.Parameterized;
 
 //Parameterized Test
 @RunWith(Parameterized.class)
-public class TestearConjuntoDeDatos {
+public class DatosConjuntoConConstructor {
     private Integer numeroDeEntrada;
     private Boolean resultadoEsperado;
     private Primos primos;
@@ -22,8 +22,8 @@ public class TestearConjuntoDeDatos {
         primos = new Primos();
     }
 
-    //constructor
-    public TestearConjuntoDeDatos(Integer numeroDeEntrada, Boolean resultadoEsperado) {
+    //Usamos constructor para los parametros de la coleccion
+    public DatosConjuntoConConstructor(Integer numeroDeEntrada, Boolean resultadoEsperado) {
         this.numeroDeEntrada = numeroDeEntrada;
         this.resultadoEsperado = resultadoEsperado;
      }

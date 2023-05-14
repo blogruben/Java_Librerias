@@ -1,4 +1,4 @@
-package org.ruben.java.testing.TestsParaAgrupar;
+package org.ruben.java.testing.agruparTests;
 
 import org.junit.Test;
 import org.junit.experimental.categories.Category;

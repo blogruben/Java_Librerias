@@ -5,10 +5,10 @@ import org.junit.experimental.categories.Categories.ExcludeCategory;
 import org.junit.experimental.categories.Categories.IncludeCategory;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite.SuiteClasses;
-import org.ruben.java.testing.TestsParaAgrupar.ClaseA;
-import org.ruben.java.testing.TestsParaAgrupar.ClaseB;
-import org.ruben.java.testing.TestsParaAgrupar.TipoDos;
-import org.ruben.java.testing.TestsParaAgrupar.TipoUno;
+import org.ruben.java.testing.agruparTests.ClaseA;
+import org.ruben.java.testing.agruparTests.ClaseB;
+import org.ruben.java.testing.agruparTests.TipoDos;
+import org.ruben.java.testing.agruparTests.TipoUno;
 
 
 @RunWith(Categories.class)

@@ -1,4 +1,4 @@
-package org.ruben.java.testing.TestsParaAgrupar;
+package org.ruben.java.testing.agruparTests;
 
 import static org.junit.Assert.assertTrue;
 
