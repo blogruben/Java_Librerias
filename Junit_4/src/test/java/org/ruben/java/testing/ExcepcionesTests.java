@@ -2,9 +2,9 @@ package org.ruben.java.testing;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.fail;
-
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 public class ExcepcionesTests {
     Calcular calcular = new Calcular("centimetros");
@@ -14,7 +14,7 @@ public class ExcepcionesTests {
         assertEquals("2 centimetros", calcular.dividir(4, 2));
     }
 
-    // Coprobamos que devueleve esta excepcion
+    // Comprobamos que devueleve esta excepcion
     @Test(expected = ArithmeticException.class)
     public void dividirEntreCero_Error1() {
         calcular.dividir(4, 0);
@@ -29,17 +29,32 @@ public class ExcepcionesTests {
         }
     }
 
+    @Rule
+    public ExpectedException exceptionEsperada = ExpectedException.none();
+
+    @Test
+    public void GivenMultiplicarPositivos_WhenMultiplicoPorNumeroNegativo_ThenIllegalArgumentException() {
+        exceptionEsperada.expect(IllegalArgumentException.class);
+        exceptionEsperada.expectMessage("No se permiten valores negativos.");
+        calcular.multiplicarPositivos(-1, 3);
+    }
+
 }
 
 class Calcular {
-    private String unidades;
+    private String unid;
 
-    Calcular(String message) {
-        this.unidades = message;
+    Calcular(String unidades) {
+        this.unid = unidades;
     }
 
-    String dividir(int nominador, int denominador) {
-        return nominador / denominador + " " + unidades;
+    String dividir(int nom, int deno) {
+        return nom / deno + " " + unid;
     }
 
+    public int multiplicarPositivos(int i, int j) {
+        if (i < 0 || j < 0)
+            throw new IllegalArgumentException("ERROR -> No se permiten valores negativos.");
+        return i * j;
+    }
 }
