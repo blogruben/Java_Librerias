@@ -1,4 +1,4 @@
-package org.ruben.java.testing;
+package org.ruben.java.testing.hamcrest;
 
 import org.hamcrest.core.CombinableMatcher;
 import static org.hamcrest.CoreMatchers.allOf;
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertThat;
 import org.junit.Test;
 
 //Assertions son funciones esticas para hacer comprobaciones
-public class ComprobarValoresHamscrest {
+public class ComprobarValoresHAMCREST {
 
   // Core Hamcrest Matchers with assertThat
   @Test

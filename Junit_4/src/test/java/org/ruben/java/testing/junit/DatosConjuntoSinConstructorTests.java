@@ -1,4 +1,4 @@
-package org.ruben.java.testing;
+package org.ruben.java.testing.junit;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.runners.Parameterized.*;
 
 @RunWith(Parameterized.class)
-public class DatosConjuntoSinConstructor {
+public class DatosConjuntoSinConstructorTests {
 
     //@Parameter tienen que ser public
     //Tenemos el orden para la coleccion, no necesitamos constructor

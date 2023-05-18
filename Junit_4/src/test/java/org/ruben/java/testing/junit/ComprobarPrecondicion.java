@@ -1,4 +1,4 @@
-package org.ruben.java.testing;
+package org.ruben.java.testing.junit;
 
 import org.junit.Assume;
 import org.junit.Test;

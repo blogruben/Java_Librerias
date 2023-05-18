@@ -1,4 +1,4 @@
-package org.ruben.java.testing;
+package org.ruben.java.testing.junit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

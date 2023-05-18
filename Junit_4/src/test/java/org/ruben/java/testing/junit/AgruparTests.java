@@ -1,9 +1,9 @@
-package org.ruben.java.testing;
+package org.ruben.java.testing.junit;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import org.ruben.java.testing.agruparTests.TestClase1;
-import org.ruben.java.testing.agruparTests.TestClase2;
+import org.ruben.java.testing.junit.agruparTests.TestClase1;
+import org.ruben.java.testing.junit.agruparTests.TestClase2;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
