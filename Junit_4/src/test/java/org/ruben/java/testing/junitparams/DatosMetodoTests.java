@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.ruben.java.testing.junitparams.dominio.Persona;
+import org.ruben.java.testing.junitparams.dominio.PersonaAge;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import static org.hamcrest.CoreMatchers.is;
@@ -12,12 +12,10 @@ import static org.hamcrest.CoreMatchers.is;
 @RunWith(JUnitParamsRunner.class)
 public class DatosMetodoTests {
 
-
-
     @Test
     @Parameters(method = "adultValues")
     public void personIsAdultConMetodo(int age, boolean valid) throws Exception {
-        assertEquals(valid, new Persona(age).isAdult());
+        assertEquals(valid, new PersonaAge(age).isAdult());
     }
     
     private Object[] adultValues() {
@@ -31,7 +29,7 @@ public class DatosMetodoTests {
 
     @Test
     @Parameters
-    public void isAdult(Persona person, boolean valid) throws Exception {
+    public void isAdult(PersonaAge person, boolean valid) throws Exception {
         assertThat(person.isAdult(), is(valid));
     }
 
@@ -39,10 +37,10 @@ public class DatosMetodoTests {
     //para enlazar estos datos con metodo isAdult
     private Object[] parametersForIsAdult() {
         return new Object[]{
-                     new Object[]{new Persona(13), false},
-                     new Object[]{new Persona(17), false},
-                     new Object[]{new Persona(18), true},
-                     new Object[]{new Persona(22), true}
+                     new Object[]{new PersonaAge(13), false},
+                     new Object[]{new PersonaAge(17), false},
+                     new Object[]{new PersonaAge(18), true},
+                     new Object[]{new PersonaAge(22), true}
                 };
     }
 

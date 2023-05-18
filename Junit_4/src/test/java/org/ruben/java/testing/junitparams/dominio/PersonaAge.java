@@ -1,9 +1,9 @@
 package org.ruben.java.testing.junitparams.dominio;
 
-public class Persona {
+public class PersonaAge {
     private int age;
 
-    public Persona(int age) {
+    public PersonaAge(int age) {
         this.age = age;
     }
 
@@ -11,4 +11,10 @@ public class Persona {
         return age >= 18;
     }
 
+    @Override
+    public String toString() {
+        return "Persona [age=" + age + "]";
+    }
+
 }
+
