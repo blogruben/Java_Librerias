@@ -45,6 +45,26 @@ public class DatosMetodoTests {
     }
 
 
+    @Test
+    @Parameters(method = "mixedParameters")
+    public void usageOfMultipleTypesOfParameters(
+            boolean booleanValue, int[] primitiveArray, String stringValue, String[] stringArray) {
+
+        assertEquals(true, booleanValue);
+        assertEquals("Test", stringValue);
+
+    }
+
+    public Object mixedParameters() {
+        boolean booleanValue = true;
+        int[] primitiveArray = { 1, 2, 3 };
+        String stringValue = "Test";
+        String[] stringArray = { "one", "two", null };
+        return new Object[] {
+                new Object[] { booleanValue, primitiveArray, stringValue, stringArray },
+        };
+
+    }
 
 
 }

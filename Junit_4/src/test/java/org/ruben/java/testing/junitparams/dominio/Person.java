@@ -9,8 +9,9 @@ public class Person {
     //    this.age = age;
     //}
 
-    public Person(String name,String apellido) {
+    public Person(String name,String apellido, int edad) {
         this.name = name;
+        this.age = edad;
     }
 
     public String getName() {
