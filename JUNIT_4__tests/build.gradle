@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClassName = 'org.ruben.java.junit.App'
+}
+
+
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+}
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+task wrapVersion(type: Wrapper) {
+   gradleVersion = '5.6' 
+}
+
