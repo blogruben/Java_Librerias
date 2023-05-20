@@ -1,5 +1,6 @@
 package org.ruben.java.testing.hamcrest;
 
+import org.hamcrest.Matchers;
 import org.hamcrest.core.CombinableMatcher;
 import static org.hamcrest.CoreMatchers.allOf;
 import static org.hamcrest.CoreMatchers.anyOf;
@@ -21,6 +22,12 @@ public class ComprobarValoresHAMCREST {
     assertThat("good", anyOf(equalTo("bad"), equalTo("good")));
     assertThat(7, not(CombinableMatcher.<Integer> either(equalTo(3)).or(equalTo(4))));
     assertThat(new Object(), not(sameInstance(new Object())));
+
+    int i = 2;
+    assertThat(i, Matchers.either(Matchers.is(3)).or(Matchers.is(5)));
+    int j = 2;
+    assertThat(j, Matchers.anyOf(Matchers.is(3),Matchers.is(5)));
+
   }
 
   @Test

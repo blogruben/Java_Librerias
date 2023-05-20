@@ -1,0 +1,5 @@
+nombre, apellido, edad, esMayor, nombreCompleto
+Raul, Torres, 21, true, Raul Torres
+Raul, Castillo, 17, false, Raul Castillo
+Raul, Gomez, 36, true, Raul Gomez
+Raul, Martin, 12, false, Raul Martin

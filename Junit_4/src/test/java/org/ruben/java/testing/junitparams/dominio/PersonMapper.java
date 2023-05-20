@@ -7,9 +7,9 @@ import junitparams.mappers.CsvWithHeaderMapper;
 
 public class PersonMapper extends CsvWithHeaderMapper {
     @Override
-    public Person[] map(Reader reader) {
+    public Persona[] map(Reader reader) {
         Object[] map = super.map(reader);
-        List<Person> result = new LinkedList<>();
+        List<Persona> result = new LinkedList<>();
         for (Object lineObj : map) {
             String line = (String) lineObj;
             String[] elements = line.split(",");
@@ -17,9 +17,9 @@ public class PersonMapper extends CsvWithHeaderMapper {
             String name= elements[0].trim();
             String apellido = elements[1].trim();
             int edad = Integer.parseInt(elements[2].trim()) ;
-            result.add(new Person( name, apellido, edad ));
+            result.add(new Persona( name, apellido, edad ));
         }
-        Person[]arr = new Person [result.size()];
+        Persona[]arr = new Persona [result.size()];
         result.toArray(arr);
         return arr;
     }

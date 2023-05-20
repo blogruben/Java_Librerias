@@ -1,0 +1,5 @@
+nombre, apellido, edad, esMayor
+Raul, torres, 21, true
+Raul, castillo, 17, false
+Raul, gomez, 36, true
+Raul, martin, 12, false
