@@ -9,14 +9,5 @@ Loa metodos pueden puede nombrarse con "should", por ejemplo "ordersShouldBeCrea
 Tambien podemos usar el "Given[EstadoInicial]When[LoQueHacemos]Then[Resultado]" 
 
 
-
-
-
 Con Hamcrest tenemos sintaxis más legible, y devuelve errores más legibles también.
 
-
-
-https://www.adictosaltrabajo.com/2011/10/19/hamcrest/
-
-
-https://www.google.com/search?q=hamcrest&oq=hamcrest&aqs=chrome..69i57j69i64j69i59l2.108007571j0j15&sourceid=chrome&ie=UTF-8&bshm=ncc/1
