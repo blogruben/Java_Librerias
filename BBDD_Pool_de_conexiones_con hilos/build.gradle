@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url="https://broadinstitute.jfrog.io/artifactory/libs-release-local"//repositorio Oracle
+    }
+}
+
+dependencies {
+    compile group: 'com.h2database', name: 'h2', version: '1.3.148'
+    implementation 'com.oracle.jdbc:ojdbc8:12.2.0.1'
+}
+
+application {
+    mainClassName = 'org.ruben.java.oracle.App'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8 
+task wrapVersion(type: Wrapper) {
+   gradleVersion = '5.6'
+}
