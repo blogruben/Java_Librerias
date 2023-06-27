@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.h2database:h2:1.3.148'              //h2
+    implementation 'commons-dbcp:commons-dbcp:1.4'          //pool de conexiones
+}
+
+application {
+    mainClassName = 'org.ruben.java.pool.App'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8 
+task wrapVersion(type: Wrapper) {
+   gradleVersion = '5.6'
+}
