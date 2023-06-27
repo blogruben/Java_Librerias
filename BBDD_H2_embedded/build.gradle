@@ -12,7 +12,7 @@ dependencies {
 }
 
 application {
-    mainClassName = 'org.gi.infra.wsil.backend.preex.App'
+    mainClassName = 'org.ruben.wsil.java.h2.App'
 }
 
 sourceCompatibility = 1.8
