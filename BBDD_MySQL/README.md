@@ -1,0 +1,5 @@
+#BBDD MySQL
+
+```
+gradle run
+```
